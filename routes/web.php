@@ -22,6 +22,10 @@ Route::get('/home', 'HomeController@index');
 Route::get('/client/add', 'ClientController@get_add_client');
 Route::post('/client/add', 'ClientController@post_add_client');
 
+// ROTAS PARA ADICIONAR O VEICULO NO BANCO DE DADOS
+Route::get('/vehicle/add', 'VehicleController@get_add_vehicle');
+Route::post('/vehicle/add', 'VehicleController@post_add_vehicle');
+
 //ROTAS PARA LISTAR PRODUTOS
 Route::get('/client', ['uses' => 'ClientController@get_list_client', 'as' => 'client.listPage']);
 Route::post('/client', ['uses' => 'clientController@post_list_client', 'as' => 'client.list']);

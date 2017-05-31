@@ -1,4 +1,4 @@
-@extends('layouts.locastyle')
+@extends('layouts.application')
 
 @section('content')
 <h1 class="ls-title-intro ls-ico-list">Editar Cliente</h1>
