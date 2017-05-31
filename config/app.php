@@ -171,11 +171,11 @@ return [
         /*
          * Application Service Providers...
          */
-        VipCar\Providers\AppServiceProvider::class,
-        VipCar\Providers\AuthServiceProvider::class,
-        // VipCar\Providers\BroadcastServiceProvider::class,
-        VipCar\Providers\EventServiceProvider::class,
-        VipCar\Providers\RouteServiceProvider::class,
+        App\Providers\AppServiceProvider::class,
+        App\Providers\AuthServiceProvider::class,
+        // App\Providers\BroadcastServiceProvider::class,
+        App\Providers\EventServiceProvider::class,
+        App\Providers\RouteServiceProvider::class,
 
     ],
 
