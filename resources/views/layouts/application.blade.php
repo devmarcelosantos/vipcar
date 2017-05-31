@@ -66,7 +66,7 @@
            <li>
            <a href="#" class="ls-ico-users" title="Clientes">Clientes</a>
             <ul>
-              <li><a href="/locawebstyle/documentacao/exemplos/painel1/config-domain">Cadastrar</a></li>
+              <li><a href="/client/add">Cadastrar</a></li>
               <li><a href="/locawebstyle/documentacao/exemplos/painel1/config-email">Editar</a></li>
               <li><a href="/locawebstyle/documentacao/exemplos/painel1/config-aspect">Buscar</a></li>
               <li><a href="/locawebstyle/documentacao/exemplos/painel1/config-answer">Excluir</a></li>
