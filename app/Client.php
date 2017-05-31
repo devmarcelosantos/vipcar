@@ -4,18 +4,17 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 
 class Client extends Model{
-  protected $fillable = ['name'];
+  protected $fillable = ['name', 'cpf'];
 
   public function getClient($field)
   {
-    if(is_null($field['id']) && is_null($field['name']))
+    if(is_null($field['name']) && is_null($field['cpf']))
     {
-    } elseif ($field['id'] > '0') {
-      $client = \App\Client::where('id', $field['id'])->get();
-    } else {
-      $client = \App\Client::where('name', $field['name'])->get();
+    } elseif (!is_null($field['name']) || !is_null($field['cpf'])) {
+      $client = \App\Client::where('name', 'LIKE', '%'.$field['name'].'%')
+                         ->orWhere('cpf', $field["cpf"])->get();
     }
-    return $client;
+    return $client;    
   }
 
   public function getClients()
