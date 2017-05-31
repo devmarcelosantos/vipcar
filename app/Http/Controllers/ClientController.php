@@ -9,7 +9,7 @@ use App\Http\Requests;
 
 class ClientController extends Controller
 {
-    private $client;
+  private $client;
 
   public function __construct(Client $client)
   {
@@ -48,7 +48,7 @@ class ClientController extends Controller
   public function post_add_client(Request $info)
   {
     $client = $this->client->addClient($info);
-    return redirect()->route('client.list');
+    return redirect()->route('clients');
   }
   //------------------------------------------------------------//
 
@@ -56,7 +56,7 @@ class ClientController extends Controller
     public function get_edit_edit($id)
   {
     $client = $this->client->find($id);
-    return view('client/edit_clientt', compact('client'));
+    return view('client/edit_client', compact('client'));
   }
 
   public function post_edit_client(Request $info, $id)
@@ -69,10 +69,9 @@ class ClientController extends Controller
     $client->phone = $field['phone'];
     $client->birth_date = $field['birth_date'];
     $client->save();
-    return redirect()->route('client.list');
+    return redirect()->route('clients');
   }
   //------------------------------------------------------------//
-
   
 }
 

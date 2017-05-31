@@ -14,27 +14,24 @@
 
 Auth::routes();
 
-// ROTAS PARA A CONTROLLER HOME - MÉTODO INDEX
-Route::get('/', 'HomeController@index');
-Route::get('/home', 'HomeController@index');
+// ROTAS PARA DESLOGAR E ENVIAR PARA VIEW DE LOGIN
+Route::get('/logout', 'Auth\LoginController@logout');
 
-// ROTAS PARA ADICIONAR O CLIENTE NO BANCO DE DADOS
-Route::get('/client/add', 'ClientController@get_add_client');
-Route::post('/client/add', 'ClientController@post_add_client');
+// ROTAS PARA A CONTROLLER HOME - METODO INDEX
+Route::get('/', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home');
 
-// ROTAS PARA ADICIONAR O VEICULO NO BANCO DE DADOS
-Route::get('/vehicle/add', 'VehicleController@get_add_vehicle');
-Route::post('/vehicle/add', 'VehicleController@post_add_vehicle');
+//================== ROTAS PARA CLIENTE ==================//
+// ROTAS PARA ADICIONAR CLIENTES
+Route::get('/client/add', 'ClientController@get_add_client')->name('client.add');
+Route::post('/client/add', 'ClientController@post_add_client')->name('client.add');
 
-//ROTAS PARA LISTAR PRODUTOS
-Route::get('/client', ['uses' => 'ClientController@get_list_client', 'as' => 'client.listPage']);
-Route::post('/client', ['uses' => 'clientController@post_list_client', 'as' => 'client.list']);
-Route::get('/clients', ['uses' => 'clientController@list_clients', 'as' => 'clients.list']);
+// ROTAS PARA LISTAR CLIENTES
+Route::get('/client', 'ClientController@get_list_client')->name('client.listPage');
+Route::post('/client', 'ClientController@post_list_client')->name('client.list');
+Route::get('/clients', 'ClientController@list_clients')->name('clients');
 
 // ROTAS PARA EDITAR CLIENTE NO BANCO DE DADOS
 Route::get('/client/edit/{id}', ['uses' => 'ClientController@get_edit_client', 'as' => 'client.editPage']);
 Route::post('/client/edit/{id}', ['uses' => 'ClientController@post_edit_client', 'as' => 'client.edit']);
 Route::get('/client/delete/{id}', ['uses' => 'ClientController@delete_client', 'as' => 'client.delete']);
-
-// ROTAS PARA DESLOGAR E ENVIAR PARA VIEW DE LOGIN
-Route::get('/logout', 'Auth\LoginController@logout');

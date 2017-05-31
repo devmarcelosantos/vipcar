@@ -3,7 +3,7 @@
 @section('content')
 <h1 class="ls-title-intro ls-ico-user-add">Adicionar Cliente</h1>
 <div class="ls-box">
-  <form method="post" action="/client/add" class="ls-form row">
+  <form method="post" action="{{ route('client.add') }}" class="ls-form row">
     <input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
     <fieldset>
       <label class="ls-label col-md-3">

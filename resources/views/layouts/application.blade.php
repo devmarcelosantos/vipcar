@@ -41,7 +41,7 @@
 
   <span class="ls-show-sidebar ls-ico-menu"></span>
 
-  <a href="/locawebstyle/documentacao/exemplos//pre-painel"  class="ls-go-next"><span class="ls-text">Voltar à lista de serviços</span></a>
+  <a href="{{ route('home') }}"  class="ls-go-next"><span class="ls-text">Voltar à lista de serviços</span></a>
 
   <!-- Nome do produto/marca com sidebar -->
     <h1 class="ls-brand-name">
@@ -66,10 +66,9 @@
            <li>
            <a href="#" class="ls-ico-users" title="Clientes">Clientes</a>
             <ul>
-              <li><a href="/client/add">Cadastrar</a></li>
+              <li><a href="{{ route('client.add') }}">Cadastrar</a></li>
+              <li><a href="{{ route('clients') }}">Buscar</a></li>
               <li><a href="/client/edit">Editar</a></li>
-              <li><a href="/client/list">Buscar</a></li>
-              <li><a href="/locawebstyle/documentacao/exemplos/painel1/config-answer">Excluir</a></li>
             </ul>
             </li>
             <li>
