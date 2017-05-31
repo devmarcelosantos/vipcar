@@ -1,6 +1,6 @@
 <?php
 
-namespace VipCar\Http\Controllers;
+namespace App\Http\Controllers;
 use DB;
 use \App\Client;
 use Illuminate\Http\Request;
@@ -18,8 +18,28 @@ class ClientController extends Controller
 
     $this->middleware('auth');
   }
+  //---------------- Listar cliente Específico -----------------//
+  public function get_list_client()
+  {
+    return view('client/list_client');
+  }
+
+  public function post_list_client(Request $field)
+  {
+    $clients = $this->client->getClient($field);
+    return view('client/list_client', compact('clients'));
+  }
+  //------------------------------------------------------------//
+
+  //--------------------- Listar clientes ----------------------//
+  public function list_clients()
+  {                       
+    $clients = $this->clients->getClients();
+    return view('client/list_client', compact('clients'));
+  }
+  //------------------------------------------------------------//
   
-  //-------------------- Adicionar Produtos --------------------//
+  //-------------------- Adicionar Clientes --------------------//
   public function get_add_client()
   {
     return view('client/add_client');
@@ -31,4 +51,28 @@ class ClientController extends Controller
     return redirect()->route('client.list');
   }
   //------------------------------------------------------------//
+
+ //-------------------- Editar Clientes --------------------//
+    public function get_edit_edit($id)
+  {
+    $client = $this->client->find($id);
+    return view('clientt/edit_clientt', compact('clientt'));
+  }
+
+  public function post_edit_client(Request $info, $id)
+  {
+    $client = $this->client->find($id);
+    $client->name = $field['name'];
+    $client->cpf = $field['cpf'];
+    $client->email = $field['email'];
+    $client->address = $field['address'];
+    $client->phone = $field['phone'];
+    $client->birth_date = $field['birth_date'];
+    $client->save();
+    return redirect()->route('client.list');
+  }
+  //------------------------------------------------------------//
+
+  
 }
+

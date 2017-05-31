@@ -22,6 +22,14 @@ Route::get('/home', 'HomeController@index');
 Route::get('/client/add', 'ClientController@get_add_client');
 Route::post('/client/add', 'ClientController@post_add_client');
 
+//ROTAS PARA LISTAR PRODUTOS
+Route::get('/client', ['uses' => 'ClientController@get_list_client', 'as' => 'client.listPage']);
+Route::post('/client', ['uses' => 'clientController@post_list_client', 'as' => 'client.list']);
+Route::get('/clients', ['uses' => 'clientController@list_clients', 'as' => 'clients.list']);
+
+// ROTAS PARA EDITAR CLIENTE NO BANCO DE DADOS
+Route::get('/client/edit/{id}', ['uses' => 'ClientController@get_edit_client', 'as' => 'client.editPage']);
+Route::post('/client/edit/{id}', ['uses' => 'ClientController@post_edit_client', 'as' => 'client.edit']);
 
 // ROTAS PARA DESLOGAR E ENVIAR PARA VIEW DE LOGIN
 Route::get('/logout', 'Auth\LoginController@logout');

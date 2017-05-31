@@ -1,6 +1,6 @@
 <?php
 
-namespace VipCar;
+namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
