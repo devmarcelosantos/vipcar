@@ -62,13 +62,13 @@
 
       <nav class="ls-menu">
         <ul>
-           <li><a href="/locawebstyle/documentacao/exemplos/painel1/home" class="ls-ico-home" title="Pagina Inicial">Pagina Inicial</a></li>
+           <li><a href="/" class="ls-ico-home" title="Pagina Inicial">Pagina Inicial</a></li>
            <li>
            <a href="#" class="ls-ico-users" title="Clientes">Clientes</a>
             <ul>
               <li><a href="/client/add">Cadastrar</a></li>
-              <li><a href="/Client/edit">Editar</a></li>
-              <li><a href="/locawebstyle/documentacao/exemplos/painel1/config-aspect">Buscar</a></li>
+              <li><a href="/client/edit">Editar</a></li>
+              <li><a href="/client/list">Buscar</a></li>
               <li><a href="/locawebstyle/documentacao/exemplos/painel1/config-answer">Excluir</a></li>
             </ul>
             </li>

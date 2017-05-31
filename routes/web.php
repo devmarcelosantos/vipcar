@@ -30,6 +30,7 @@ Route::get('/clients', ['uses' => 'clientController@list_clients', 'as' => 'clie
 // ROTAS PARA EDITAR CLIENTE NO BANCO DE DADOS
 Route::get('/client/edit/{id}', ['uses' => 'ClientController@get_edit_client', 'as' => 'client.editPage']);
 Route::post('/client/edit/{id}', ['uses' => 'ClientController@post_edit_client', 'as' => 'client.edit']);
+Route::get('/client/delete/{id}', ['uses' => 'ClientController@delete_client', 'as' => 'client.delete']);
 
 // ROTAS PARA DESLOGAR E ENVIAR PARA VIEW DE LOGIN
 Route::get('/logout', 'Auth\LoginController@logout');

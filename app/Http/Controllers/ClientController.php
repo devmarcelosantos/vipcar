@@ -56,7 +56,7 @@ class ClientController extends Controller
     public function get_edit_edit($id)
   {
     $client = $this->client->find($id);
-    return view('clientt/edit_clientt', compact('clientt'));
+    return view('client/edit_clientt', compact('client'));
   }
 
   public function post_edit_client(Request $info, $id)
