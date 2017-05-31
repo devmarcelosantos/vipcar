@@ -15,8 +15,8 @@
 Auth::routes();
 
 // ROTAS PARA A CONTROLLER HOME - MÉTODO INDEX
-Route::get('/', 'HomeController@index')->name('home');
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index');
+Route::get('/home', 'HomeController@index');
 
 
 // ROTAS PARA DESLOGAR E ENVIAR PARA VIEW DE LOGIN

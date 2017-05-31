@@ -25,8 +25,7 @@
     <!-- Dropdown com detalhes da conta de usuário -->
     <div data-ls-module="dropdown" class="ls-dropdown ls-user-account">
       <a href="#" class="ls-ico-user">
-        <img src="/locawebstyle/assets/images/locastyle/avatar-example.jpg" alt="" />
-        <span class="ls-name">Adm Vip Car</span>
+        <span class="ls-name">{{ Auth::user()->name }}</span>
       </a>
 
       <nav class="ls-dropdown-nav ls-user-menu">
