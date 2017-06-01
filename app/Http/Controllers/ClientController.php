@@ -21,12 +21,16 @@ class ClientController extends Controller
   //---------------- Listar cliente Específico -----------------//
   public function get_list_client()
   {
-    return view('client/list_client');
+    return list_clients();
   }
 
   public function post_list_client(Request $field)
   {
-    $clients = $this->client->getClient($field);
+    if(is_null($field['name']) && is_null($field['cpf'])) {
+      $clients = $this->clients->getClients();
+    } else {
+      $clients = $this->client->getClient($field);
+    }
     return view('client/list_client', compact('clients'));
   }
   //------------------------------------------------------------//
@@ -53,7 +57,7 @@ class ClientController extends Controller
   //------------------------------------------------------------//
 
  //-------------------- Editar Clientes --------------------//
-    public function get_edit_edit($id)
+    public function get_edit_client($id)
   {
     $client = $this->client->find($id);
     return view('client/edit_client', compact('client'));
@@ -62,12 +66,12 @@ class ClientController extends Controller
   public function post_edit_client(Request $info, $id)
   {
     $client = $this->client->find($id);
-    $client->name = $field['name'];
-    $client->cpf = $field['cpf'];
-    $client->email = $field['email'];
-    $client->address = $field['address'];
-    $client->phone = $field['phone'];
-    $client->birth_date = $field['birth_date'];
+    $client->name = $info['name'];
+    $client->cpf = $info['cpf'];
+    $client->email = $info['email'];
+    $client->address = $info['address'];
+    $client->phone = $info['phone'];
+    $client->birth_date = $info['birth_date'];
     $client->save();
     return redirect()->route('clients');
   }
