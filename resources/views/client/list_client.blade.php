@@ -11,7 +11,7 @@
         <b class="ls-label-text">Nome:</b>
         <input type="text" name="name" placeholder="Nome do cliente" class="ls-field ls-no-spin">
       </label>
-      <label class="ls-label col-md-4 col-xs-12">
+      <label class="ls-label col-md-2 col-xs-12">
         <b class="ls-label-text">CPF:</b>
         <input type="text" name="cpf" maxlength="11" placeholder="Cpf do cliente" class="ls-field">
       </label>
@@ -35,22 +35,26 @@
       </tr>
     </thead>
     <tbody>
-    @foreach ($clients as $client)
-      <tr>
-        <td><a href="" title="">{{ $client->name }}</a></td>
-        <td class="hidden-xs">{{ $client->email }}</td>
-        <td>{{ $client->address }}</td>
-        <td class="hidden-xs">{{ $client->phone }}</td>
-        <td class="ls-regroup ">
-          <div data-ls-module="dropdown" class="ls-dropdown ">
-            <a href="#" class="ls-btn ls-btn-sm ">Administrar</a>
-            <ul class="ls-dropdown-nav">
-              <li><a href="{{ route('client.editPage', $client->id) }}">Alterar</a></li>
-            </ul>
-          </div>
-        </td>
-      </tr>
-    @endforeach
+    @if (count($clients))
+      @foreach ($clients as $client)
+        <tr>
+          <td><a href="" title="">{{ $client->name }}</a></td>
+          <td class="hidden-xs">{{ $client->email }}</td>
+          <td>{{ $client->address }}</td>
+          <td class="hidden-xs">{{ $client->phone }}</td>
+          <td class="ls-regroup ">
+            <div data-ls-module="dropdown" class="ls-dropdown ">
+              <a href="#" class="ls-btn ls-btn-sm ">Administrar</a>
+              <ul class="ls-dropdown-nav">
+                <li><a href="{{ route('client.edit', $client->id) }}">Alterar</a></li>
+              </ul>
+            </div>
+          </td>
+        </tr>
+      @endforeach
+    @else
+      <p>Cliente não encontrado!</p>
+    @endif  
     </tbody>
   </table>
 </div>
