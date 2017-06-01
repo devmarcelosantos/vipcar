@@ -3,31 +3,31 @@
 @section('content')
 <h1 class="ls-title-intro ls-ico-user-add">Adicionar Cliente</h1>
 <div class="ls-box">
-  <form method="post" action="{{ route('client.add') }}" class="ls-form row">
+  <form method="POST" action="{{ route('client.postAdd') }}" class="ls-form row">
     <input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
     <fieldset>
       <label class="ls-label col-md-3">
-        <b class="ls-label-text">Nome</b>
-        <input type="text" data-ls-module="charCounter" maxlength="100" name="name" placeholder="Nome do Cliente" required >
+        <b class="ls-label-text">Nome:</b>
+        <input type="text" data-ls-module="charCounter" maxlength="50" name="name" placeholder="Nome do Cliente" required >
       </label>
       <label class="ls-label col-md-2">
-        <b class="ls-label-text">CPF</b>
-        <input class="ls-no-spin" type="text" name="cpf" placeholder="CPF" required >
+        <b class="ls-label-text">CPF:</b>
+        <input class="ls-no-spin" maxlength="11" type="text" name="cpf" placeholder="CPF" required >
       </label>
       <label class="ls-label col-md-2">
-        <b class="ls-label-text">Email</b>
-        <input class="ls-no-spin" type="text" name="email" placeholder="Email" required >
+        <b class="ls-label-text">Email:</b>
+        <input class="ls-no-spin" maxlength="80" type="text" name="email" placeholder="Email" required >
       </label>
       <label class="ls-label col-md-2">
-        <b class="ls-label-text">Endereço</b>
-        <input class="ls-no-spin" type="text" name="address" placeholder="Endereco" required >
+        <b class="ls-label-text">Endereço:</b>
+        <input class="ls-no-spin" maxlength="80" type="text" name="address" placeholder="Endereco" required >
       </label>
       <label class="ls-label col-md-2">
-        <b class="ls-label-text">Telefone</b>
-        <input class="ls-no-spin" type="number" name="phone" placeholder="(00) 00000-0000" required>
+        <b class="ls-label-text">Telefone:</b>
+        <input class="ls-no-spin" maxlength="11" type="number" name="phone" placeholder="(00) 00000-0000" required>
       </label>
         <label class="ls-label col-md-2">
-        <b class="ls-label-text">Data Nascimento</b>
+        <b class="ls-label-text">Data Nascimento:</b>
         <input class="ls-no-spin" type="date" name="birth_date" placeholder="00/00/0000" required>
       </label>
     </fieldset>
