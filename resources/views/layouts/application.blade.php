@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="ls-theme-green">
+<html class="ls-theme-yellow-gold">
   <head>
     <title>VIP CAR</title>
 
@@ -68,7 +68,6 @@
             <ul>
               <li><a href="{{ route('client.add') }}">Cadastrar</a></li>
               <li><a href="{{ route('clients') }}">Buscar</a></li>
-              <li><a href="/client/edit">Editar</a></li>
             </ul>
             </li>
             <li>
@@ -106,23 +105,7 @@
         <h3 class="ls-title-2">Notificações</h3>
         <ul>
           <li class="ls-dismissable">
-            <a href="#">Blanditiis est est dolorem iure voluptatem eos deleniti repellat et laborum consequatur</a>
-            <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
-          </li>
-          <li class="ls-dismissable">
-            <a href="#">Similique eos rerum perferendis voluptatibus</a>
-            <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
-          </li>
-          <li class="ls-dismissable">
-            <a href="#">Qui numquam iusto suscipit nisi qui unde</a>
-            <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
-          </li>
-          <li class="ls-dismissable">
-            <a href="#">Nisi aut assumenda dignissimos qui ea in deserunt quo deleniti dolorum quo et consequatur</a>
-            <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
-          </li>
-          <li class="ls-dismissable">
-            <a href="#">Sunt consequuntur aut aut a molestiae veritatis assumenda voluptas nam placeat eius ad</a>
+            <a href="#">Novo cliente adicionado !</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
         </ul>
