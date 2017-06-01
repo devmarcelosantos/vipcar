@@ -75,18 +75,16 @@
               <a href="#" class="ls-ico-dashboard" title="Veiculo">Veiculo</a>
               <ul>
                 <li><a href="/vehicle/add">Cadastrar</a></li>
-                <li><a href="/locawebstyle/documentacao/exemplos/painel1/config-email">Editar</a></li>
                 <li><a href="/locawebstyle/documentacao/exemplos/painel1/config-aspect">Buscar</a></li>
-                <li><a href="/locawebstyle/documentacao/exemplos/painel1/config-answer">Excluir</a></li>
+                <li><a href="/locawebstyle/documentacao/exemplos/painel1/config-email">Editar</a></li>
               </ul>
             </li>
             <li>
               <a href="#" class="ls-ico-panel-backup" title="Servicos">Serviços</a>
               <ul>
                 <li><a href="/locawebstyle/documentacao/exemplos/painel1/config-domain">Cadastrar</a></li>
-                <li><a href="/locawebstyle/documentacao/exemplos/painel1/config-email">Editar</a></li>
                 <li><a href="/locawebstyle/documentacao/exemplos/painel1/config-aspect">Buscar</a></li>
-                <li><a href="/locawebstyle/documentacao/exemplos/painel1/config-answer">Excluir</a></li>
+                <li><a href="/locawebstyle/documentacao/exemplos/painel1/config-email">Editar</a></li>
               </ul>
             </li>
         </ul>
