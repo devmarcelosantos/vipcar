@@ -15,11 +15,11 @@
           <h6 class="ls-title-4">CLIENTES CADASTRADOS</h6>
         </div>
         <div class="ls-box-body">
-          <strong>100.000</strong>
+          <strong>{{ App\Client::count() }}</strong>
           <small>Clientes</small>
         </div>
         <div class="ls-box-footer">
-          <a href="#" aria-label="Buscar Cliente" class="ls-btn ls-btn-sm" title="Buscar Cliente">Buscar Cliente</a>
+          <a href="{{ route('clients') }}" aria-label="Buscar Cliente" class="ls-btn ls-btn-sm" title="Buscar Cliente">Buscar Cliente</a>
         </div>
       </div>
     </div>

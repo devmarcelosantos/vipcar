@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="ls-theme-green">
+<html class="ls-theme-yellow-gold">
   <head>
     <title>VIP CAR</title>
 
@@ -25,8 +25,7 @@
     <!-- Dropdown com detalhes da conta de usuário -->
     <div data-ls-module="dropdown" class="ls-dropdown ls-user-account">
       <a href="#" class="ls-ico-user">
-        <img src="/locawebstyle/assets/images/locastyle/avatar-example.jpg" alt="" />
-        <span class="ls-name">Adm Vip Car</span>
+        <span class="ls-name">{{ Auth::user()->name }}</span>
       </a>
 
       <nav class="ls-dropdown-nav ls-user-menu">
@@ -42,7 +41,7 @@
 
   <span class="ls-show-sidebar ls-ico-menu"></span>
 
-  <a href="/locawebstyle/documentacao/exemplos//pre-painel"  class="ls-go-next"><span class="ls-text">Voltar à lista de serviços</span></a>
+  <a href="{{ route('home') }}"  class="ls-go-next"><span class="ls-text">Voltar à lista de serviços</span></a>
 
   <!-- Nome do produto/marca com sidebar -->
     <h1 class="ls-brand-name">
@@ -63,32 +62,28 @@
 
       <nav class="ls-menu">
         <ul>
-           <li><a href="/locawebstyle/documentacao/exemplos/painel1/home" class="ls-ico-home" title="Pagina Inicial">Pagina Inicial</a></li>
+           <li><a href="/" class="ls-ico-home" title="Pagina Inicial">Pagina Inicial</a></li>
            <li>
            <a href="#" class="ls-ico-users" title="Clientes">Clientes</a>
             <ul>
-              <li><a href="/locawebstyle/documentacao/exemplos/painel1/config-domain">Cadastrar</a></li>
-              <li><a href="/locawebstyle/documentacao/exemplos/painel1/config-email">Editar</a></li>
-              <li><a href="/locawebstyle/documentacao/exemplos/painel1/config-aspect">Buscar</a></li>
-              <li><a href="/locawebstyle/documentacao/exemplos/painel1/config-answer">Excluir</a></li>
+              <li><a href="{{ route('client.add') }}">Cadastrar</a></li>
+              <li><a href="{{ route('clients') }}">Buscar</a></li>
             </ul>
             </li>
             <li>
               <a href="#" class="ls-ico-dashboard" title="Veiculo">Veiculo</a>
               <ul>
-                <li><a href="/locawebstyle/documentacao/exemplos/painel1/config-domain">Cadastrar</a></li>
-                <li><a href="/locawebstyle/documentacao/exemplos/painel1/config-email">Editar</a></li>
+                <li><a href="/vehicle/add">Cadastrar</a></li>
                 <li><a href="/locawebstyle/documentacao/exemplos/painel1/config-aspect">Buscar</a></li>
-                <li><a href="/locawebstyle/documentacao/exemplos/painel1/config-answer">Excluir</a></li>
+                <li><a href="/locawebstyle/documentacao/exemplos/painel1/config-email">Editar</a></li>
               </ul>
             </li>
             <li>
               <a href="#" class="ls-ico-panel-backup" title="Servicos">Serviços</a>
               <ul>
                 <li><a href="/locawebstyle/documentacao/exemplos/painel1/config-domain">Cadastrar</a></li>
-                <li><a href="/locawebstyle/documentacao/exemplos/painel1/config-email">Editar</a></li>
                 <li><a href="/locawebstyle/documentacao/exemplos/painel1/config-aspect">Buscar</a></li>
-                <li><a href="/locawebstyle/documentacao/exemplos/painel1/config-answer">Excluir</a></li>
+                <li><a href="/locawebstyle/documentacao/exemplos/painel1/config-email">Editar</a></li>
               </ul>
             </li>
         </ul>
@@ -110,23 +105,7 @@
         <h3 class="ls-title-2">Notificações</h3>
         <ul>
           <li class="ls-dismissable">
-            <a href="#">Blanditiis est est dolorem iure voluptatem eos deleniti repellat et laborum consequatur</a>
-            <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
-          </li>
-          <li class="ls-dismissable">
-            <a href="#">Similique eos rerum perferendis voluptatibus</a>
-            <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
-          </li>
-          <li class="ls-dismissable">
-            <a href="#">Qui numquam iusto suscipit nisi qui unde</a>
-            <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
-          </li>
-          <li class="ls-dismissable">
-            <a href="#">Nisi aut assumenda dignissimos qui ea in deserunt quo deleniti dolorum quo et consequatur</a>
-            <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
-          </li>
-          <li class="ls-dismissable">
-            <a href="#">Sunt consequuntur aut aut a molestiae veritatis assumenda voluptas nam placeat eius ad</a>
+            <a href="#">Novo cliente adicionado !</a>
             <a href="#" data-ls-module="dismiss" class="ls-ico-close ls-close-notification"></a>
           </li>
         </ul>
