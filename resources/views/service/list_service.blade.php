@@ -38,6 +38,7 @@
       </tr>
     </thead>
     <tbody>
+    @if (count($services))
     @foreach ($services as $service)
       <tr>
         <td><a href="" title="">{{ $service->name }}</a></td>
@@ -47,12 +48,15 @@
           <div data-ls-module="dropdown" class="ls-dropdown ">
             <a href="#" class="ls-btn ls-btn-sm ">Administrar</a>
             <ul class="ls-dropdown-nav">
-              <li><a href="{{ route('vehicle.editPage', $vehicle->brand) }}">Alterar</a></li>
+              <li><a href="{{ route('service.editPage', $service->id) }}">Alterar</a></li>
             </ul>
           </div>
         </td>
       </tr>
     @endforeach
+      @else
+      <p>Serviço não encontrado!</p>
+    @endif
     </tbody>
   </table>
 </div>

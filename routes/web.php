@@ -39,15 +39,30 @@ Route::get('/client/delete/{id}', 'ClientController@delete_client')->name('clien
 //========================================================================================//
 
 //================================== ROTAS PARA VEÍCULO ==================================//
-// ROTAS PARA ACICIONAR VEICULO
+// ROTAS PARA ADICIONAR VEICULO
 Route::get('/vehicle/add', 'VehicleController@get_add_vehicle')->name('vehicle.add'); // Rota da view
 Route::post('/vehicle/add', 'VehicleController@post_add_vehicle')->name('vehicle.postAdd'); // Rota do formulário
 
 // ROTAS PARA LISTAR VEICULO
-//Route::get('/clients', 'ClientController@list_clients')->name('clients');
+Route::get('/vehicles', 'VehicleController@list_vehicles')->name('vehicles');
 
 // ROTAS PARA EDITAR VEICULO
 
 // ROTAS PARA DELETAR VEICULO
 
 //========================================================================================//
+
+//================================== ROTAS PARA SERVICO ==================================//
+// ROTAS PARA ADICIONAR SERVICO
+Route::get('/service/add', 'ServiceController@get_add_service')->name('service.add'); // Rota da view
+Route::post('/service/add', 'ServiceController@post_add_service')->name('service.postAdd'); // Rota do formulário
+
+// ROTAS PARA LISTAR SERVIÇOS
+Route::get('/service', function() { return redirect()->route('services'); });
+Route::post('/service', 'ServiceController@post_list_service')->name('service.list');
+Route::get('/services', 'ServiceController@list_services')->name('services');
+
+//ROTAS PARA EDITAR SERVIÇOS
+Route::get('/service/edit/{id}', 'ServiceController@get_edit_service')->name('service.editPage');
+Route::post('/service/edit/{id}', 'ServiceController@post_edit_service')->name('service.postEdit');
+Route::get('/service/delete/{id}', 'ServiceController@delete_service')->name('service.delete');

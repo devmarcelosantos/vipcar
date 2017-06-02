@@ -29,19 +29,29 @@
           <h6 class="ls-title-4">VEICULOS CADASTRADOS</h6>
         </div>
         <div class="ls-box-body">
-          <strong class="ls-ico-bars"></strong>
+          <strong>{{ App\Vehicle::count() }}</strong>
           <small>Veiculos</small>
         </div>
         <div class="ls-box-footer">
-          <a href="#" aria-label="Comprar mais envios" class="ls-btn ls-btn-sm" title="Buscar Veiculo">Buscar Veiculo</a>
+          <a href="{{ route('vehicles') }}" aria-label="Buscar Veiculos" class="ls-btn ls-btn-sm" title="Buscar Veiculo">Buscar Veiculo</a>
         </div>
       </div>
     </div>
     <div class="col-sm-6 col-md-3">
-      <div class="ls-box ls-box-centered">
-        <strong>TEXTO</strong>
+      <div class="ls-box">
+        <div class="ls-box-head">
+          <h6 class="ls-title-4">SERVIÇOS CADASTRADOS</h6>
+        </div>
+        <div class="ls-box-body">
+          <strong>{{ App\service::count() }}</strong>
+          <small>Servicos</small>
+        </div>
+        <div class="ls-box-footer">
+          <a href="{{ route('services') }}" aria-label="Buscar servicos" class="ls-btn ls-btn-sm" title="Buscar Servico">Buscar Serviço</a>
+        </div>
       </div>
     </div>
+    
     <div class="col-sm-6 col-md-3">
       <div class="ls-box">
         <div class="ls-box-head">

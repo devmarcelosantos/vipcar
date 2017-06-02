@@ -8,15 +8,17 @@
     <fieldset>
       <label class="ls-label col-md-3">
         <b class="ls-label-text">Nome</b>
-        <input value="{{ $client->name }}" type="text" data-ls-module="charCounter" maxlength="100" name="name" placeholder="Nome do Servico" required >
+        <input value="{{ $service->name }}" type="text" data-ls-module="charCounter" maxlength="100" name="name" placeholder="Nome do Servico" required >
       </label>
        <label class="ls-label col-md-2">
         <b class="ls-label-text">Descrição</b>
-        <input value="{{ $client->cpf }}" class="ls-no-spin" type="number" name="descripion" placeholder="Modelo" required>
+        <textarea rows="4" cols="50">
+        <input value="{{ $service->description }}" class="ls-no-spin" type="number" name="descripion" placeholder="Descrição" required>
       </label>
+      </textarea>
        <label class="ls-label col-md-2">
-        <b class="ls-label-text">Ano</b>
-        <input value="{{ $client->email }}" class="ls-no-spin" type="integer" name="year" placeholder="Ano" required>
+        <b class="ls-label-text">Valor</b>
+        <input value="{{ $service->value }}" class="ls-no-spin" type="integer" name="value" placeholder="valor" required>
       </label>
     </fieldset>
     <div class="ls-actions-btn">
