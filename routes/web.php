@@ -23,8 +23,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 //================================== ROTAS PARA CLIENTE ==================================//
 // ROTAS PARA ADICIONAR CLIENTES
-Route::get('/client/add', 'ClientController@get_add_client')->name('client.add');
-Route::post('/client/add', 'ClientController@post_add_client')->name('client.postAdd');
+Route::get('/client/add', 'ClientController@get_add_client')->name('client.add'); // Rota da view
+Route::post('/client/add', 'ClientController@post_add_client')->name('client.postAdd'); // Rota do formulário
 
 // ROTAS PARA LISTAR CLIENTES
 Route::get('/client', function() { return redirect()->route('clients'); });
@@ -40,8 +40,11 @@ Route::get('/client/delete/{id}', 'ClientController@delete_client')->name('clien
 
 //================================== ROTAS PARA VEÍCULO ==================================//
 // ROTAS PARA ACICIONAR VEICULO
+Route::get('/vehicle/add', 'VehicleController@get_add_vehicle')->name('vehicle.add'); // Rota da view
+Route::post('/vehicle/add', 'VehicleController@post_add_vehicle')->name('vehicle.postAdd'); // Rota do formulário
 
 // ROTAS PARA LISTAR VEICULO
+//Route::get('/clients', 'ClientController@list_clients')->name('clients');
 
 // ROTAS PARA EDITAR VEICULO
 
