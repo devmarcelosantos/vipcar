@@ -33,6 +33,7 @@
     </fieldset>
     <div class="ls-actions-btn ls-no-padding-bottom">
       <input type="submit" value="Atualizar" class="ls-btn" title="update">
+      <a href="{{ route('clients') }}" class="ls-btn-danger">Cancelar</a>
     </div>
   </form>
 </div>
