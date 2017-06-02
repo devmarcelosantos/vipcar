@@ -16,8 +16,8 @@ class CreateVehiclesTable extends Migration
         Schema::create('vehicles', function (Blueprint $table)
         {
             $table->increments('id')->nullable(false);
-            $table->string('brand', 100)->nullable(false);
-            $table->string('model', 100)->nullable(false);
+            $table->string('brand', 20)->nullable(false);
+            $table->string('model', 30)->nullable(false);
             $table->integer('year')->unsigned()->nullable(false);
             $table->integer('client_id')->unsigned()->nullable(false);
             $table->foreign('client_id')->references('id')->on('clients');
