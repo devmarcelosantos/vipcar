@@ -44,10 +44,14 @@ Route::get('/vehicle/add', 'VehicleController@get_add_vehicle')->name('vehicle.a
 Route::post('/vehicle/add', 'VehicleController@post_add_vehicle')->name('vehicle.postAdd'); // Rota do formulário
 
 // ROTAS PARA LISTAR VEICULO
+Route::get('/vehicle', function() { return redirect()->route('vehicles'); });
+Route::post('/vehicle', 'VehicleeController@post_list_vehicle')->name('vehicle.list');
 Route::get('/vehicles', 'VehicleController@list_vehicles')->name('vehicles');
 
 // ROTAS PARA EDITAR VEICULO
-
+Route::get('/vehicle/edit/{id}', 'VehicleController@get_edit_vehicle')->name('vehicle.editPage');
+Route::post('/service/edit/{id}', 'VehicleController@post_edit_vehicle')->name('vehicle.postEdit');
+Route::get('/vehicle/delete/{id}', 'VehicleController@delete_vehicle')->name('vehicle.delete');
 // ROTAS PARA DELETAR VEICULO
 
 //========================================================================================//
