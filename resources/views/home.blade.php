@@ -44,7 +44,7 @@
         </div>
         <div class="ls-box-body">
           <strong>{{ App\service::count() }}</strong>
-          <small>Servicos</small>
+          <small>Serviços</small>
         </div>
         <div class="ls-box-footer">
           <a href="{{ route('services') }}" aria-label="Buscar servicos" class="ls-btn ls-btn-sm" title="Buscar Servico">Buscar Serviço</a>

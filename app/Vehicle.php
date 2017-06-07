@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use \App\Vehicle;
+use \App\Client;
 
 class Vehicle extends Model
 {

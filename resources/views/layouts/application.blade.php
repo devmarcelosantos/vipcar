@@ -71,7 +71,7 @@
             <li>
               <a href="#" class="ls-ico-dashboard" title="Veiculo">Veiculo</a>
               <ul>
-                <li><a href="{{ route('vehicle.add') }}">Cadastrar</a></li>
+                <li><a href="/vehicle/add/#searchclient">Cadastrar</a></li>
               </ul>
             </li>
             <li>

@@ -25,9 +25,7 @@ class VehicleController extends Controller
 
   public function get_add_vehicle(Request $field)
   {
-		if(!is_null($field['name']) || !is_null($field['cpf'])) {
-      $clients = $this->client->getClient($field);
-    }
+		$clients = Client::all();
   	return view('vehicle/add_vehicle', compact('clients'));
   }
 

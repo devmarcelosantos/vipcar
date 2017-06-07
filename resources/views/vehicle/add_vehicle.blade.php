@@ -3,51 +3,63 @@
 @section('content')
 <h1 class="ls-title-intro ls-ico-user-add">Adicionar Veiculo</h1>
 <div class="ls-box">
-  <h5 class="ls-title-5">Procurar Cliente:</h5>
-  <form method="get" action="{{ route('vehicle.add') }}" class="ls-form ls-form-horizontal row">
-    <input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
-    <fieldset>
-      <label class="ls-label col-md-4 col-xs-12">
-        <b class="ls-label-text">Nome:</b>
-        <input type="text" name="name" placeholder="Nome do cliente" class="ls-field ls-no-spin">
-      </label>
-      <label class="ls-label col-md-2 col-xs-12">
-        <b class="ls-label-text">CPF:</b>
-        <input type="text" name="cpf" maxlength="11" placeholder="Cpf do cliente" class="ls-field">
-      </label>
-    </fieldset>
-    <div class="ls-actions-btn">
-      <input type="submit" value="Buscar" class="ls-btn" title="Buscar">
-      <input class="ls-btn-danger" type="reset" value="Limpar">
-    </div>
-  </form>
+  <button data-ls-module="modal" data-target="#searchclient" class="ls-btn-primary">Buscar Cliente</button>
+  <div class="ls-modal" id="searchclient">
+    <div class="ls-modal-box">
+      <div class="ls-modal-header">
+        <button data-dismiss="modal">&times;</button>
+        <h4 class="ls-modal-title">Buscar Clientes Cadastrados</h4>
+      </div>
+      <div class="ls-modal-body" id="myModalBody">
+      <form method="post" action="{{ route('client.list') }}" class="ls-form ls-form-horizontal row">
+        <input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
+        <fieldset>
+          <label class="ls-label col-md-4 col-xs-12">
+            <b class="ls-label-text">Nome:</b>
+            <input type="text" name="name" placeholder="Nome do cliente" class="ls-field ls-no-spin">
+          </label>
+          <label class="ls-label col-md-2 col-xs-12">
+            <b class="ls-label-text">CPF:</b>
+            <input type="text" name="cpf" maxlength="11" placeholder="Cpf do cliente" class="ls-field">
+          </label>
+        </fieldset>
+        <div class="ls-actions-btn ls-no-padding-bottom">
+          <input type="submit" value="Buscar" class="ls-btn" title="Buscar">
+          <input class="ls-btn-danger" type="reset" value="Limpar">
+        </div>
+      </form>
 
-   <table class="ls-table ls-table-striped ls-bg-header">
-    <thead>
-      <tr>
-        <th>CodCadastro</th>
-        <th class="hidden-xs ls-data-ascending">
-          <a href="">Nome</a>
-        </th>
-        <th>CPF</th>
-        <th class="hidden-xs">Telefone</th>
-      </tr>
-    </thead>
-    @if (count($clients))
-      @foreach ($clients as $client)
-    <tbody>
-        <tr>
-          <td><a href="" title="">{{ $client->id }}</a></td>
-          <td class="hidden-xs">{{ $client->name }}</td>
-          <td>{{ $client->cpf }}</td>
-          <td class="hidden-xs">{{ $client->phone }}</td>
-        </tr>
-      @endforeach
-    @else
-      <p>Cliente não encontrado!</p>
-    @endif
-    </tbody>
-  </table>
+        <table class="ls-table ls-table-striped ls-bg-header">
+          <thead>
+            <tr>
+              <th>CodCadastro</th>
+              <th class="hidden-xs ls-data-ascending"><a href="">Nome</a></th>
+              <th>CPF</th>
+              <th class="hidden-xs">Telefone</th>
+            </tr>
+          </thead>
+          @if (count($clients))
+            @foreach ($clients as $client)
+              <tbody>
+                <tr>
+                  <td><a href="" title="">{{ $client->id }}</a></td>
+                  <td class="hidden-xs">{{ $client->name }}</td>
+                  <td>{{ $client->cpf }}</td>
+                  <td class="hidden-xs">{{ $client->phone }}</td>
+                </tr>
+              </tbody>
+            @endforeach
+          @else
+            <p>Cliente não encontrado!</p>
+          @endif
+        </table>
+      </div>
+      <div class="ls-modal-footer">
+        <button class="ls-btn ls-float-right" data-dismiss="modal">Close</button>
+        <button type="submit" class="ls-btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div><!-- /.modal -->
   
   <hr>
   <h5 class="ls-title-5">Cadastrar Veículo:</h5>

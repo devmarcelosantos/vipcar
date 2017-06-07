@@ -40,6 +40,8 @@ Route::get('/client/delete/{id}', 'ClientController@delete_client')->name('clien
 
 //================================== ROTAS PARA VEÍCULO ==================================//
 // ROTAS PARA ADICIONAR VEICULO
+Route::get('/vehicle/add/searchclient', 'VehicleController@get_search_client')->name('vehicle.addSearchClient'); // Rota para procurar cliente
+
 Route::get('/vehicle/add', 'VehicleController@get_add_vehicle')->name('vehicle.add'); // Rota da view
 Route::post('/vehicle/add', 'VehicleController@post_add_vehicle')->name('vehicle.postAdd'); // Rota do formulário
 
