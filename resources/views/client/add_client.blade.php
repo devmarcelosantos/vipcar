@@ -26,7 +26,7 @@
         <b class="ls-label-text">Telefone:</b>
         <input class="ls-no-spin" maxlength="11" type="number" name="phone" placeholder="(00) 00000-0000" required>
       </label>
-        <label class="ls-label col-md-2">
+      <label class="ls-label col-md-2">
         <b class="ls-label-text">Data Nascimento:</b>
         <input class="ls-no-spin" type="date" name="birth_date" placeholder="00/00/0000" required>
       </label>

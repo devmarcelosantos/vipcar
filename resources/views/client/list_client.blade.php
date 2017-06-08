@@ -16,7 +16,7 @@
         <input type="text" name="cpf" maxlength="11" placeholder="Cpf do cliente" class="ls-field">
       </label>
     </fieldset>
-    <div class="ls-actions-btn">
+    <div class="ls-actions-btn ls-no-padding-bottom">
       <input type="submit" value="Buscar" class="ls-btn" title="Buscar">
       <input class="ls-btn-danger" type="reset" value="Limpar">
     </div>
@@ -54,7 +54,7 @@
       @endforeach
     @else
       <p>Cliente não encontrado!</p>
-    @endif  
+    @endif
     </tbody>
   </table>
 </div>

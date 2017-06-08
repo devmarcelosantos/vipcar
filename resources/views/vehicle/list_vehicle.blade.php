@@ -30,6 +30,7 @@
           <a href="">Modelo</a>
         </th>
         <th>Ano</th>
+         <th>Cliente</th>
         <th>Ação</th>
       </tr>
     </thead>
@@ -39,6 +40,7 @@
         <td><a href="" title="">{{ $vehicle->brand }}</a></td>
         <td class="hidden-xs">{{ $vehicle->model }}</td>
         <td>{{ $vehicle->year }}</td>
+        <td>{{ $vehicle->Client }}</td>
         <td class="ls-regroup ">
           <div data-ls-module="dropdown" class="ls-dropdown ">
             <a href="#" class="ls-btn ls-btn-sm ">Administrar</a>

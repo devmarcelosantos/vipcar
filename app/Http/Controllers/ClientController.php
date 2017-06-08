@@ -18,6 +18,7 @@ class ClientController extends Controller
 
     $this->middleware('auth');
   }
+
   //---------------- Listar cliente Específico -----------------//
   public function get_list_client()
   {
@@ -33,8 +34,8 @@ class ClientController extends Controller
     }
     return view('client/list_client', compact('clients'));
   }
-  //------------------------------------------------------------//
 
+  //------------------------------------------------------------//
   //--------------------- Listar clientes ----------------------//
   public function list_clients()
   {                       
@@ -42,7 +43,6 @@ class ClientController extends Controller
     return view('client/list_client', compact('clients'));
   }
   //------------------------------------------------------------//
-  
   //-------------------- Adicionar Clientes --------------------//
   public function get_add_client()
   {
@@ -55,8 +55,7 @@ class ClientController extends Controller
     return redirect()->route('clients');
   }
   //------------------------------------------------------------//
-
- //-------------------- Editar Clientes --------------------//
+  //-------------------- Editar Clientes --------------------//
     public function get_edit_client($id)
   {
     $client = $this->client->find($id);
@@ -76,6 +75,5 @@ class ClientController extends Controller
     return redirect()->route('clients');
   }
   //------------------------------------------------------------//
-  
 }
 

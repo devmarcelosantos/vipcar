@@ -8,15 +8,15 @@
     <fieldset>
       <label class="ls-label col-md-3">
         <b class="ls-label-text">Marca</b>
-        <input value="{{ $client->name }}" type="text" data-ls-module="charCounter" maxlength="100" name="brand" placeholder="Marca do Veiculo" required >
+        <input value="{{ $vehicle->name }}" type="text" data-ls-module="charCounter" maxlength="100" name="brand" placeholder="Marca do Veiculo" required >
       </label>
        <label class="ls-label col-md-2">
         <b class="ls-label-text">Modelo</b>
-        <input value="{{ $client->cpf }}" class="ls-no-spin" type="number" name="model" placeholder="Modelo" required>
+        <input value="{{ $vehicle->model }}" class="ls-no-spin" type="number" name="model" placeholder="Modelo" required>
       </label>
        <label class="ls-label col-md-2">
         <b class="ls-label-text">Ano</b>
-        <input value="{{ $client->email }}" class="ls-no-spin" type="integer" name="year" placeholder="Ano" required>
+        <input value="{{ $vehicle->year }}" class="ls-no-spin" type="integer" name="year" placeholder="Ano" required>
       </label>
     </fieldset>
     <div class="ls-actions-btn">

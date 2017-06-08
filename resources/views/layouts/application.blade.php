@@ -31,8 +31,6 @@
       <nav class="ls-dropdown-nav ls-user-menu">
         <ul>
           <li><a href="#">Meus dados</a></li>
-          <li><a href="#">Faturas</a></li>
-          <li><a href="#">Planos</a></li>
           <li><a href="{{ route('logout') }}">Sair</a></li>
          </ul>
       </nav>
@@ -73,17 +71,14 @@
             <li>
               <a href="#" class="ls-ico-dashboard" title="Veiculo">Veiculo</a>
               <ul>
-                <li><a href="/vehicle/add">Cadastrar</a></li>
-                <li><a href="/locawebstyle/documentacao/exemplos/painel1/config-aspect">Buscar</a></li>
-                <li><a href="/locawebstyle/documentacao/exemplos/painel1/config-email">Editar</a></li>
+                <li><a href="/vehicle/add/#searchclient">Cadastrar</a></li>
               </ul>
             </li>
             <li>
               <a href="#" class="ls-ico-panel-backup" title="Servicos">Serviços</a>
               <ul>
-                <li><a href="/locawebstyle/documentacao/exemplos/painel1/config-domain">Cadastrar</a></li>
-                <li><a href="/locawebstyle/documentacao/exemplos/painel1/config-aspect">Buscar</a></li>
-                <li><a href="/locawebstyle/documentacao/exemplos/painel1/config-email">Editar</a></li>
+                <li><a href="{{ route('service.add') }}">Cadastrar</a></li>
+                <li><a href="{{ route('services') }}">Buscar</a></li>
               </ul>
             </li>
         </ul>
