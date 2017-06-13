@@ -3,6 +3,8 @@
 
 Aplicação criada utilizando PHP com o framework Laravel.
 
+Template utilizado como base -> <a href="http://opensource.locaweb.com.br/locawebstyle/documentacao/introducao/">LocaStyle</a>
+
 Banco de dados utilizado -> MySQL
 
 
